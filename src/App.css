@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
     text-decoration: none;
     box-sizing: border-box;
-    /* border: 1px solid red !important; */
+    border: 1px solid red !important;
 }
 
 body {
@@ -87,7 +87,7 @@ section {
 }
 
 .konten-home-img {
-    padding-right: 14%;
+    margin-right: 14%;
     width: auto;
     height: auto;
 }
@@ -155,7 +155,7 @@ section {
     border-radius: 5px;
     border: 2px solid #568caa;
     text-align: center;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 .button-cv:hover {
@@ -295,7 +295,7 @@ footer {
     }
 
     .konten-about-me-img {
-        padding-right: 0;
+        padding-right: 0%;
     }
 
     .konten-home {
