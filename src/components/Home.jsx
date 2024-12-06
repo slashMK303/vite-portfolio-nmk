@@ -1,7 +1,7 @@
 export default function Home() {
     return (
         <section>
-            <div className="nav animate__animated animate__fadeInDown">
+            <div className="navfix animate__animated animate__fadeInDown">
                 <div className="navbar-icon">
                     <div className="home">
                         <a href="#home">

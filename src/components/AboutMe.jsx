@@ -90,7 +90,7 @@ export default function About() {
                                 With supporting text below as a natural lead-in
                                 to additional content.
                             </p>
-                            <a href="#" className="btn btn-primary">
+                            <a href="#" className="btn btn-info">
                                 Go somewhere
                             </a>
                         </div>
