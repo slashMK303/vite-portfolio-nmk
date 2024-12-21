@@ -1,4 +1,9 @@
+import { useState } from "react";
+import "aos/dist/aos.css";
+
 export default function About() {
+    const [activeTab, setActiveTab] = useState("skill");
+
     return (
         <section>
             <div id="aboutme" className="container">
@@ -48,7 +53,11 @@ export default function About() {
                             <ul className="nav nav-tabs card-header-tabs border-info">
                                 <li className="nav-item ">
                                     <a
-                                        className="nav-link text-white"
+                                        className={`nav-link text-white ${
+                                            activeTab === "skill"
+                                                ? "active-tab"
+                                                : ""
+                                        }`}
                                         style={{ borderColor: "transparent" }}
                                         onMouseEnter={(e) =>
                                             (e.target.style.borderColor =
@@ -58,14 +67,19 @@ export default function About() {
                                             (e.target.style.borderColor =
                                                 "transparent")
                                         }
-                                        href="#aboutme"
+                                        onClick={() => setActiveTab("skill")}
+                                        href="#skill"
                                     >
                                         Skill
                                     </a>
                                 </li>
                                 <li className="nav-item">
                                     <a
-                                        className="nav-link text-white"
+                                        className={`nav-link text-white ${
+                                            activeTab === "link"
+                                                ? "active-tab"
+                                                : ""
+                                        }`}
                                         style={{ borderColor: "transparent" }}
                                         onMouseEnter={(e) =>
                                             (e.target.style.borderColor =
@@ -75,7 +89,8 @@ export default function About() {
                                             (e.target.style.borderColor =
                                                 "transparent")
                                         }
-                                        href="#aboutme"
+                                        onClick={() => setActiveTab("link")}
+                                        href="#link"
                                     >
                                         Link
                                     </a>
@@ -83,19 +98,40 @@ export default function About() {
                             </ul>
                         </div>
                         <div className="card-body">
-                            <h5 className="card-title text-white">
-                                Special title treatment
-                            </h5>
-                            <p className="card-text text-white">
-                                With supporting text below as a natural lead-in
-                                to additional content.
-                            </p>
-                            <a href="#" className="btn btn-info">
-                                Go somewhere
-                            </a>
+                            {activeTab === "skill" && (
+                                <div className="card-content fade-in">
+                                    <h5 className="card-title text-white">
+                                        Skill
+                                    </h5>
+                                    <p className="card-text text-white">
+                                        I am proficient in technologies like
+                                        React, Node.js, Express, MongoDB, and
+                                        more.
+                                    </p>
+                                </div>
+                            )}
+                            {activeTab === "link" && (
+                                <div className="card-content fade-in">
+                                    <h5 className="card-title text-white">
+                                        Link
+                                    </h5>
+                                    <p className="card-text text-white">
+                                        Visit my GitHub:{" "}
+                                        <a
+                                            href="https://github.com/slashMK303"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-info"
+                                        >
+                                            GitHub Profile
+                                        </a>
+                                    </p>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
+
                 <div
                     className="konten-about-me-img"
                     data-aos="fade-left"

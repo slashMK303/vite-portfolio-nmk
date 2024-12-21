@@ -12,6 +12,8 @@ export default function Project() {
                         <div className="text-about-me">My Project</div>
                         <div className="rectangle"></div>
                     </div>
+
+                    
                     
                 </div>
             </div>
